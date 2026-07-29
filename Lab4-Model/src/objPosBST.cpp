@@ -1,5 +1,5 @@
 #include "objPosBST.h"
-
+#include "MacUILib.h"
 #include <iostream>
 using namespace std;
 
@@ -85,7 +85,7 @@ void objPosBST::printTree(const TNode* thisNode) const  // private recursive
     if(thisNode == nullptr) return;
 
     printTree(thisNode->left);
-    cout << thisNode->data.getPF() << thisNode->data.getNum() << " ";
+    MacUILib_printf("%c%d ", thisNode->data.getPF(), thisNode->data.getNum());
     printTree(thisNode->right);
 }
 
